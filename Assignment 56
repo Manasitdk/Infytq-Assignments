@@ -1,0 +1,23 @@
+#PF-Assgn-56
+
+def max_frequency_word_counter(data):
+    word=""
+    frequency=0
+    data=data.lower()
+    data=data.replace(",","")
+    It=data.split()
+    for e in It:
+        freq=It.count(e)
+        if freq>frequency:
+            frequency=freq
+            word=e
+        elif freq == frequency:
+            if len(e)>len(word):
+                frequency=freq
+                word=e
+    print(word,frequency)            
+                
+   
+#Provide different values for data and test your program.
+data="Work like you do not need money, love like you have never been hurt, and dance like no one is watching"
+max_frequency_word_counter(data)
