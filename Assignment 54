@@ -1,0 +1,16 @@
+#PF-Assgn-54
+def check_anagram(data1,data2):
+    data1=data1.lower()
+    data2=data2.lower()
+    if len(data1)!=len(data2):
+        return False
+    for i in range(0,len(data1)):
+        ch1=data1[i]
+        ch2=data2[i]
+        if ch1==ch2:
+            return False
+        if data1.count(data1[i])!=data2.count(data1[i]):
+            return False
+    return True        
+    
+print(check_anagram("About","table"))
