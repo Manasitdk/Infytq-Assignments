@@ -1,0 +1,19 @@
+#PF-Assgn-58
+def validate_credit_card_number(card_number):
+    #start writing your code here
+    card_number=card_number[::-1]
+    s=0
+    for i in range(len(card_number)):
+        if i%2!=0:
+            double=str(int(card_number[i])*2)
+            if len(double)>1:
+                double=int(double[0])+int(double[1])
+            s=s+int(double)
+        else:
+            s=s+int(card_number[i])
+    if s%10==0:
+        return True
+    else:
+        return False
+
+print(validate_credit_card_number("1456734512345698"))
