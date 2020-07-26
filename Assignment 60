@@ -1,0 +1,10 @@
+#PF-Assgn-60
+def remove_duplicates(value):
+    #start writing your code here
+    output=''
+    for c in value:
+        if c not in output:
+            output=output+c
+    return output        
+
+print(remove_duplicates("11223445566666ababzzz@@@123#*#*"))
